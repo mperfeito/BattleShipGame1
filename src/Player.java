@@ -31,18 +31,18 @@ public class Player {
                 if (spot.getB() == b && spot.getA() == a && spot.getSpotStatus().equals(SpotStatus.Ship)){
                     spot.setSpotStatus(SpotStatus.Hit);
                     board.getCoordinates(a,b).setSpotStatus(SpotStatus.Hit);
-                    System.out.println("U hit a ship!");
+                    System.out.println("\u001B[35m" + "U hit a ship!" + "\u001B[0m");
                     return true;
                 } else if (spot.getB() == b && spot.getA() == a && spot.getSpotStatus().equals(SpotStatus.Hit)){
                     spot.setSpotStatus(SpotStatus.Hit);
                     board.getCoordinates(a,b).setSpotStatus(SpotStatus.Hit);
-                    System.out.println("Already Hit");
+                    System.out.println("\u001B[35m" + "Already Hit" + "\u001B[0m");
                     return false;
                 }
             }
         }
         board.getCoordinates(a,b).setSpotStatus(SpotStatus.Miss);
-        System.out.println("Try again");
+        System.out.println("\u001B[35m" + "Try again" +  "\u001B[0m");
         return false;
     }
 }

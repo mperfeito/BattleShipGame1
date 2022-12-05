@@ -3,16 +3,14 @@ public class Display {
     public void gameBeginning() {
 
         System.out.println("\u001B[33m" + "\n" +
-                "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
-                "█▄ ▄ ▀██ ▄ ██ ▄ ▄ █ ▄ ▄ █▄ ▄███▄ ▄▄ ██████ ▄▄▄▄█ █ █▄ ▄█▄ ▄▄ █\n" +
-                "██ ▄ ▀██ ▀ ████ █████ ████ ██▀██ ▄█▀██████▄▄▄▄ █ ▄ ██ ███ ▄▄▄█\n" +
-                "▀▄▄▄▄▀▀▄▄▀▄▄▀▀▄▄▄▀▀▀▄▄▄▀▀▄▄▄▄▄▀▄▄▄▄▄▀▀▀███▄▄▄▄▄▀▄▀▄▀▄▄▄▀▄▄▄▀▀▀" + "\u001B[0m");
+                "\uD83C\uDD31\uD83C\uDD30\uD83C\uDD43\uD83C\uDD43\uD83C\uDD3B\uD83C\uDD34 \uD83C\uDD42\uD83C\uDD37\uD83C\uDD38\uD83C\uDD3F \uD83C\uDD36\uD83C\uDD30\uD83C\uDD3C\uD83C\uDD34" + "\u001B[0m");
     }
 
     public void printMenu() {
 
-        System.out.println("(0) Play \n" +
-                "(1) Exit game");
+        System.out.println("\u001B[36m" +"\uD83C\uDD3C\uD83C\uDD34\uD83C\uDD3D\uD83C\uDD44:" + "\u001B[0m \n" +
+                "\u001B[36m" + "0 🄿🄻🄰🅈" + "\u001B[0m \n" +
+                "\u001B[36m" + "1 🄴🅇🄸🅃 🄶🄰🄼🄴" + "\u001B[0m");
     }
 
     public void printBoard(Board board) {
@@ -30,9 +28,9 @@ public class Display {
             }
             for (int i = 0; i < board.getColumnSize(); i++) {
                 switch (board.getCoordinates(j, i).getCharacter()) {
-                    case 'H' -> System.out.print('✔' + " ");
-                    case 'M' -> System.out.print('✘' + " ");
-                    case 'O' -> System.out.print('~' + " ");
+                    case 'H' -> System.out.print("\u001B[32m" + '✔' + "\u001B[0m" + " ");
+                    case 'M' -> System.out.print("\u001B[31m" + '✘' + "\u001B[0m"  + " ");
+                    case 'O' -> System.out.print("\u001B[34m" + '~' + "\u001B[0m"  + " ");
 
                 }
             }

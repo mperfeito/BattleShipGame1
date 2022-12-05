@@ -43,7 +43,6 @@ public class Board {
             case 1 -> {
                 spot.setSpotStatus(SpotStatus.Ship);
                 ship.add(spot);
-                break;
             }
             case 2 -> {
                 spot.setSpotStatus(SpotStatus.Ship);

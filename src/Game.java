@@ -28,16 +28,14 @@ public class Game {
             }
             player2Ships.add(ship);
         }
-
-        System.out.println("created ships");
         Player player1 = new Player(player1Ships, player1Board);
         Player player2 = new Player(player2Ships, player2Board);
         boolean game = true;
         Display display = new Display();
-        System.out.println("Player 1 board");
+        System.out.println("\u001B[34m" + "\uD83C\uDD3F\uD83C\uDD3B\uD83C\uDD30\uD83C\uDD48\uD83C\uDD34\uD83C\uDD41 1 \uD83C\uDD31\uD83C\uDD3E\uD83C\uDD30\uD83C\uDD41\uD83C\uDD33" + "\u001B[0m");
         display.printBoard(player1Board);
-        System.out.println("------------------");
-        System.out.println("Player 2 board");
+        System.out.println("\u001B[34m" + "---------------------" + "\u001B[0m" );
+        System.out.println("\u001B[34m" + "\uD83C\uDD3F\uD83C\uDD3B\uD83C\uDD30\uD83C\uDD48\uD83C\uDD34\uD83C\uDD41 2 \uD83C\uDD31\uD83C\uDD3E\uD83C\uDD30\uD83C\uDD41\uD83C\uDD33" + "\u001B[0m");
         display.printBoard(player2Board);
         int numOfShipsPlayer1 = player1.spotsOccupied(player1Ships);
         int numOfShipsPlayer2 = player2.spotsOccupied(player2Ships);
@@ -49,7 +47,7 @@ public class Game {
             display.printBoard(player2.getBoard());
             if (numOfShipsPlayer2 == 0) {
                 display.printBoard(player2.getBoard());
-                System.out.println("Player 1 wins");
+                System.out.println("\u001B[33m" + "\uD83C\uDD3F\uD83C\uDD3B\uD83C\uDD30\uD83C\uDD48\uD83C\uDD34\uD83C\uDD41 1 \uD83C\uDD46\uD83C\uDD38\uD83C\uDD3D\uD83C\uDD42 !" + "\u001B[0m");
                 break;
             }
 
@@ -58,7 +56,7 @@ public class Game {
             display.printBoard(player1.getBoard());
             if (numOfShipsPlayer1 == 0) {
                 display.printBoard(player1.getBoard());
-                System.out.println("Player 2 wins");
+                System.out.println("\u001B[33m" + "\uD83C\uDD3F\uD83C\uDD3B\uD83C\uDD30\uD83C\uDD48\uD83C\uDD34\uD83C\uDD41 2 \uD83C\uDD46\uD83C\uDD38\uD83C\uDD3D\uD83C\uDD42 !" + "\u001B[0m");
                 break;
             }
 

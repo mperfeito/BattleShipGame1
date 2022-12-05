@@ -24,22 +24,19 @@ public class BattleShipGame {
 
         while (!exit) {
             display.printMenu();
-            System.out.println("Choose a option:");
-            System.out.println();
             userChoice = input.getMenuOption();
             switch (userChoice) {
                 case 0:
-                    System.out.println("The game will start");
+                    System.out.println("\u001B[35m" +"🅃🄷🄴 🄶🄰🄼🄴 🅆🄸🄻🄻 🅂🅃🄰🅁🅃 ..." + "\u001B[0m");
                     game.gameOn();
                     break;
                 case 1:
-                    System.out.println("See u next time");
+                    System.out.println("\u001B[36m" + "See u next time ! " + "\u001B[0m" );
                     exit();
                     break;
             }
         }
     }
-
     public void exit() {
         System.exit(0);
     }
